@@ -119,59 +119,82 @@ A school counselor was curious about the average of IQ of the students in her sc
 
 \item
 Please plot the relationships among \emph{Y}, \emph{X1}, \emph{X2}, and \emph{X3}? What are the correlations among them (you just need to describe the graph and the relationships among them)?
-\vspace{1cm}
-\lstinputlisting[language=R, firstline=38, lastline=102]{PS01_answersZYZ.R}
+\vspace{0.5cm}
+\lstinputlisting[language=R, firstline=38, lastline=137]{PS01_answersZYZ.R}
 \begin{figure}[h!]\centering
-	\caption{\footnotesize YvsX1 scatterplot.}
+	\caption{\footnotesize Y vs X1 scatter plot.}
 	\label{fig:plot_Y_vs_X1}
 	\includegraphics[width=.75\textwidth]{Y_vs_X1_scatterplot.pdf}
 \end{figure}
 \begin{figure}[h!]\centering
-	\caption{\footnotesize YvsX2 scatterplot.}
+	\caption{\footnotesize Y vs X2 scatter plot.}
 	\label{fig:plot_Y_vs_X2}
 	\includegraphics[width=.75\textwidth]{Y_vs_X2_scatterplot.pdf}
 \end{figure}
 \begin{figure}[h!]\centering
-	\caption{\footnotesize YvsX3 scatterplot.}
+	\caption{\footnotesize Y vs X3 scatter plot.}
 	\label{fig:plot_1Y_vs_X3}
 	\includegraphics[width=.75\textwidth]{Y_vs_X3_scatterplot.pdf}
 \end{figure}
 \begin{figure}[h!]\centering
-	\caption{\footnotesize X1vsX2 scatterplot.}
+	\caption{\footnotesize X1 vs X2 scatter plot.}
 	\label{fig:plot_X1_vs_X2}
 	\includegraphics[width=.75\textwidth]{X1_vs_X2_scatterplot.pdf}
 \end{figure}
 \begin{figure}[h!]\centering
-	\caption{\footnotesize X1vsX3 scatterplot.}
+	\caption{\footnotesize X1 vs X3 scatter plot.}
 	\label{fig:plot_X1_vs_X3}
 	\includegraphics[width=.75\textwidth]{X1_vs_X3_scatterplot.pdf}
 \end{figure}
 \begin{figure}[h!]\centering
-	\caption{\footnotesize X2vsX3 scatterplot.}
+	\caption{\footnotesize X2 vs X3 scatter plot.}
 	\label{fig:plot_X2_vs_X3}
 	\includegraphics[width=.75\textwidth]{X2_vs_X3_scatterplot.pdf}
 \end{figure}
 \begin{figure}[h!]\centering
-	\caption{\footnotesize  scatterplot matrix}
+	\caption{\footnotesize  scatter plot matrix}
 	\label{fig:matrix_X1_X2_X3_X4_Y}
 	\includegraphics[width=.75\textwidth]{scatterplot_matrix.pdf}
 \end{figure}
 \vspace{10cm}
  From the above six scatter plots between X1, X2, X3 and Y and the linear model smooth line, we can know that there is a positive correlation between X1, X2, X3 and Y. Among them, there is a strong positive correlation between Y and X1, which shows that the more personal income in each region, the more investment in assisted housing, and vice versa. X1 and X3 also have a strong positive correlation, which shows that the more individuals in each region earn more, the greater the proportion of people living in urban areas.The correlation between X2 and X3 is weak, indicating that the number of "financially insecure" residents per 100,000 people in the state has little to do with the number of people living in urban areas. \\
+
+In order to get a more accurate relationship, we get the regression formula between Y, X1, X2, and X3 based on the linear regression model of Y, X1, X2, and X3: \\
+
+1. The regression relationship between X1 and X2 is: "X1 = 1715.655 + 0.696*X2"\\
+The p value is 0.152, which is greater than 0.05. There is no significant relationship between X1 and X2\\
+
+2. The regression relationship between X1 and X3 is: "X1 = 988.947 + 1.643*X3"\\
+The p value is 0.00000513, which is less than 0.05. There is significant positive relationship between X1 and X3\\
+
+3. The regression relationship between X2 and X3 is: "X2 = 180.609 + 0.18*X3"\\
+The p value is 0.123, which is greater than 0.05. There is no significant relationship between X2 and X3\\
+
+4. The regression relationship between Y and X1 is: "Y = 32.546 + 0.025*X1"\\
+The p value is 0.00007079, which is less than 0.05. There is significant positive relationship between Y and X1\\
+
+5. The regression relationship between Y and X2 is: "Y = 59.761 + 0.07*X2"\\
+The p value is 0.001095, which is less than 0.05. There is significant positive relationship between Y and X2\\
+
+6. The regression relationship between Y and X3 is: "Y = 46.306 + 0.059*X3"\\
+The p value is 0.0006955, which is less than 0.05. There is significant positive relationship between Y and X3\\
+
+7. The regression relationship between Y and X1,X2,X3 is: "Y = 20.466 + 0.017*X1 + 0.053*X2 + 0.023*X3"\\
+The p value is 0.00001203, which is less than 0.05. There is significant positive relationship between Y and X1,X2,X3\\
 \end{itemize}
 \vspace{1cm}
 \begin{itemize}
 \item
 Please plot the relationship between \emph{Y} and \emph{Region}? On average, which region has the highest per capita expenditure on housing assistance?
-\lstinputlisting[language=R, firstline=104, lastline=129]{PS01_answersZYZ.R}
-\vspace{.5cm}
+\lstinputlisting[language=R, firstline=139, lastline=168]{PS01_answersZYZ.R}
+\vspace{5cm}
 \begin{figure}[h!]\centering
-	\caption{\footnotesize Region2vsY2 scatterplot}
+	\caption{\footnotesize Region2 vs Y2 scatterplot}
 	\label{fig:Region2_vs_Y2}
 	\includegraphics[width=.75\textwidth]{Region2_vs_Y2_scatterplot.pdf}
 \end{figure}
 \begin{figure}[h!]\centering
-	\caption{\footnotesize Region2vsY2 scatterplot}
+	\caption{\footnotesize Region2 vs Y2 scatterplot}
 	\label{fig:Region1_vs_Y1}
 	\includegraphics[width=.75\textwidth]{Region1_vs_Y1_barchart.pdf}
 \end{figure}
@@ -180,18 +203,24 @@ Please plot the relationship between \emph{Y} and \emph{Region}? On average, whi
 	\label{fig:regression model}
 	\includegraphics[width=.75\textwidth]{model.png}
 \end{figure}
-\vspace{10cm}
+\vspace{1cm}
 The p-value of the F statistic is 0.02973, which is less than the commonly used significance level of 0.05, which indicates that the Region variable has a significant impact on Y as a whole. From the scatter plot, the data points in the North Central region are concentrated and may have a strong correlation. On average, the western region has the highest spending on housing support, at about 88.30769.\\
 \item
 Please plot the relationship between \emph{Y} and \emph{X1}? Describe this graph and the relationship. Reproduce the above graph including one more variable \emph{Region} and display different regions with different types of symbols and colors.
-\lstinputlisting[language=R, firstline=131, lastline=143]{PS01_answersZYZ.R}
-\vspace{1cm}
+\lstinputlisting[language=R, firstline=170, lastline=185]{PS01_answersZYZ.R}
+
 \begin{figure}[h!]\centering
-	\caption{\footnotesize X1vsYvsRegion scatterplot}
-	\label{fig:X1vsY_Region}
+	\caption{\footnotesize X1 vs Y vs Region scatter plot}
+	\label{fig:X1 vs Y_Region}
 	\includegraphics[width=.75\textwidth]{X1vsY_Region_scatterplot.pdf}
 \end{figure}
-From this scatter plot, we can see that the per capita income of each region and the expenditure on housing support are positively correlated, and the correlation coefficient is 0.5317212, which is a strong positive correlation. In addition, the correlation between personal income and expenditure on housing support in the Northeast region (Region 1) is stronger than in other regions.\\
+\begin{figure}[h!]\centering
+	\caption{\footnotesize X1 vs Y by Region  correlation}
+	\label{fig:corr_Y_X1_Region}
+	\includegraphics[width=.75\textwidth]{corr_Y_X1_Region.png}
+\end{figure}
+	\vspace{5cm}
+From this scatter plot, we can see that the per capita income of each region is positively correlated with housing security expenditure, with a correlation coefficient of 0.5317212, which is a strong positive correlation. Therefore, the higher the per capita income of each region, the higher the housing security expenditure. In addition, the correlation between personal income and housing security expenditure in the Northeast region (region 1) is stronger than in other regions. After calculation, the correlation coefficient is about 0.802, which is a strong positive correlation.\\
 \end{itemize}
 
 
